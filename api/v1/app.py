@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """a script that starts a Flask web application"""
 
-import os
-import sys
-from flask import Flask, Blueprint
-from api.v1.views import app_views
-from models import storage
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import os
+from flask import Flask
+from models import storage
+from api.v1.views import app_views
+
+
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
