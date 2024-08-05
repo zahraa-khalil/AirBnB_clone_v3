@@ -18,6 +18,7 @@ def downtear(self):
     '''Status of your API'''
     storage.close()
 
+
 @app.errorhandler(404)
 def page_not_found(error):
     '''Handle 404 errors with a JSON response'''
