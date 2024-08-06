@@ -13,7 +13,7 @@ def get_cities(state_id):
     """ Retrieves the list of all City objects of a State """
     state = storage.get(State, state_id)
     if not state:
-        abort(404, description="Not found")
+        abort(404)
     cities = [city.to_dict() for city in state.cities]
     return jsonify(cities)
 
